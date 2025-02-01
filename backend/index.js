@@ -21,8 +21,8 @@ app.use(
 app.use("/insta/user", require("./routes/User.js"));
 app.use("/insta/content", require("./routes/Content.js"));
 
-const server = app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running at http://0.0.0.0:${PORT}`);
+const server = app.listen(PORT,  () => {
+  console.log(`Server running at ${PORT}`);
 });
 
 module.exports = server;
