@@ -20,7 +20,7 @@ export default function Signup() {
     }
 };
 
-  const url = "https://instagram-clone-8uu2.vercel.app/insta/user/signup";
+  const url = "https://instagram-clone-a458.onrender.com/insta/user/signup";
   function handleOnChange(e){
     const {name, value} = e.target;
     setUser({...user, [name]: value})

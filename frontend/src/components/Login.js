@@ -11,7 +11,7 @@ const Login = () => {
     email:"",
     password:"",
   });
-  const url = "https://instagram-clone-8uu2.vercel.app/insta/user/login";
+  const url = "https://instagram-clone-a458.onrender.com/insta/user/login";
   function handleOnChange(e){
     const {name, value} = e.target;
     setUser({...user, [name]: value})
