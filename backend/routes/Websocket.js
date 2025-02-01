@@ -9,10 +9,12 @@ const users = {}
 function webSocketConnection(server) {
   const io = new Server(server, {
     cors: {
-        origin: "https://instagram-clone-mocha-zeta.vercel.app", // Specify the exact client URL
+        origin: "https://instagram-clone-mocha-zeta.vercel.app",
         methods: ["GET", "POST"],
+        credentials: true,  
     }
 });
+
 
   
   io.use((socket, next) => {
