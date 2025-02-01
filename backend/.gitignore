@@ -1,0 +1,16 @@
+# Ignore environment file
+.env
+
+# Ignore node_modules directory
+node_modules/
+
+*.json
+
+
+backend/insta-b63bf-firebase-adminsdk-wwv5m-8508af59d8.json
+
+insta-b63bf-firebase-adminsdk-wwv5m-8508af59d8.json
+
+
+# Ignore Firebase service account JSON
+backend/insta-b63bf-firebase-adminsdk-wwv5m-8508af59d8.json

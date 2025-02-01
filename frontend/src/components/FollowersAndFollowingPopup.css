@@ -1,0 +1,45 @@
+.modal-content {
+  width: 450px;
+  height: 400px;
+  background-color: white;
+  padding: 10px;
+  overflow-y: auto;
+  border: 2px solid black;
+  box-shadow: 10px 10px 5px black;
+}
+.itzContainer {
+  color: "black";
+  margin-top: 110px;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 350px;
+    height: 330px;
+    background-color: white;
+    padding: 10px;
+    overflow-y: auto;
+    margin-left: 15px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 5px pink;
+  }
+  .itzContainer {
+    color: "black";
+    margin-top: 250px;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 350px;
+    height: 330px;
+    background-color: white;
+    padding: 10px;
+    overflow-y: auto;
+    margin-left: 10px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 5px pink;
+  }
+}

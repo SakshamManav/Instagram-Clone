@@ -1,0 +1,138 @@
+.profile-container {
+    padding: 50px 200px 0 200px;
+    margin-left: 6%;
+  }
+  .profile-img-container {
+    position: relative;
+  }
+  .editImage {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+  }
+  .followers-following-posts{
+    display: flex;
+  }
+  .profile-top {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    padding: 0px 70px 20px 30px;
+  }
+  .profile-img {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  .profile-img-container:hover .editImage {
+    display: flex;
+  }
+  .profile-info-container {
+    min-width: 400px;
+    max-width: 500px;
+  }
+  .vertical-lines {
+    background-color: black;
+    height: 2px;
+  }
+  .profile-bottom {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .post-saved-tagged {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile-bottom i,
+  span {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 1100px) {
+    .profile-container {
+      margin-left: 0;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    .profile-top {
+        display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+    }
+    .profile-img {
+      height: 120px;
+      width: 120px;
+    }
+    
+    .profile-info-container {
+      min-width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+    .post-saved-tagged {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .followers-following-posts{
+        max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      padding: 10px;
+      width: 500px;
+    }
+    .profile-img {
+        margin-top: 50px;
+      height: 200px;
+      width: 200px;
+    }
+    .editImage{
+        margin-top: 50px;
+    }
+    
+    .img-follow{
+        max-width: 100px;
+    }
+    .profile-info-container {
+      padding: 10px;
+    }
+    .img-follow{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .post-saved-tagged span {
+      margin-bottom: 10px;
+    }
+    .followers-following-posts{
+        display: flex;
+        flex-direction: column;
+    }
+   
+      .img-follow{
+        display: flex;
+        flex-direction: column;
+      }
+  }

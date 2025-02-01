@@ -1,0 +1,42 @@
+.container1 {
+    /* max-width: 12%; */
+    background-color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+  }
+  .instaLogo{
+    height: 100px;
+    width: 200px;
+    background-size: cover;
+}
+
+.menu-btn{
+    display: none;
+    
+}
+
+.leftNavContainers:hover{
+    background-color: rgb(223, 215, 215);
+}
+.left-menu-btn{
+    display: none;
+}
+
+  @media (max-width: 1100px) {
+    .container1 {
+        display: none;
+    }
+    .instaLogo{
+        height: 80px;
+        background-size: cover;
+    }
+   
+    .left-menu-btn{
+        display: block;
+    }
+  }
+  
