@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors({
   origin: "https://instagram-clone-mocha-zeta.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders: ['Content-Type', 'Authorization', 'authtoken'],
   credentials: true,
   exposedHeaders: ["Access-Control-Allow-Origin"],
 }));
