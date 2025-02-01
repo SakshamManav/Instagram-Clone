@@ -10,12 +10,12 @@ connectMongoDb();
 
 
 app.use(express.json());
-// app.use(
-//   cors({
-//     origin: ["http://192.168.29.16:3000, http://localhost:3000"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//   })
-// );
+app.use(
+  cors({
+    origin: ["http://192.168.29.16:3000, http://localhost:3000, https://instagram-clone-mocha-zeta.vercel.app/login"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.use(cors());
 

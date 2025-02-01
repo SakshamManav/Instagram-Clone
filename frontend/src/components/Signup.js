@@ -20,7 +20,7 @@ export default function Signup() {
     }
 };
 
-  const url = "http://192.168.29.16:3001/insta/user/signup";
+  const url = "https://instagram-clone-8uu2.vercel.app/insta/user/signup";
   function handleOnChange(e){
     const {name, value} = e.target;
     setUser({...user, [name]: value})

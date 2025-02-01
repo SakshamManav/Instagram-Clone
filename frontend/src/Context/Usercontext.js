@@ -31,7 +31,7 @@ export const UserProvider = (props) => {
   // TO get the user info
 
   async function getUser() {
-    const userUrl = "http://192.168.29.16:3001/insta/user/userinfo";
+    const userUrl = "https://instagram-clone-8uu2.vercel.app/insta/user/userinfo";
     let response = await fetch(userUrl, {
       method: "GET",
       headers: {
@@ -48,7 +48,7 @@ export const UserProvider = (props) => {
     let formData = new FormData();
     formData.append("image", files); // Append the content type
 
-    const url = "http://192.168.29.16:3001/insta/user/updateuserimg";
+    const url = "https://instagram-clone-8uu2.vercel.app/insta/user/updateuserimg";
     let response = await fetch(url, {
       method: "PUT",
       headers: {
@@ -67,7 +67,7 @@ export const UserProvider = (props) => {
   // To get Other users
 
   async function getOtherUsers() {
-    const userUrl = "http://192.168.29.16:3001/insta/user/searchusers";
+    const userUrl = "https://instagram-clone-8uu2.vercel.app/insta/user/searchusers";
     let response = await fetch(userUrl, {
       method: "GET",
       headers: {
@@ -82,7 +82,7 @@ export const UserProvider = (props) => {
 
   async function getUserById(userid) {
     const response = await fetch(
-      `http://192.168.29.16:3001/insta/user/searchuserbyid/${userid}`,
+      `https://instagram-clone-8uu2.vercel.app/insta/user/searchuserbyid/${userid}`,
       {
         method: "GET",
       }
@@ -101,7 +101,7 @@ export const UserProvider = (props) => {
     formData.append("contentType", contenttype); // Append the content type
     formData.append("image", file);
 
-    const url = "http://192.168.29.16:3001/insta/content/uploadcontent";
+    const url = "https://instagram-clone-8uu2.vercel.app/insta/content/uploadcontent";
     let response = await fetch(url, {
       method: "POST",
       headers: {
@@ -126,7 +126,7 @@ export const UserProvider = (props) => {
   // To get content (posts)
 
   async function getContent() {
-    const url = "http://192.168.29.16:3001/insta/content/getcontent";
+    const url = "https://instagram-clone-8uu2.vercel.app/insta/content/getcontent";
     let response = await fetch(url, {
       method: "GET",
       headers: {
@@ -142,7 +142,7 @@ export const UserProvider = (props) => {
   // To get content of user by his/her name
   async function getContentByName(usersname) {
     let response = await fetch(
-      `http://192.168.29.16:3001/insta/content/getcontent/${usersname}`,
+      `https://instagram-clone-8uu2.vercel.app/insta/content/getcontent/${usersname}`,
       {
         method: "GET",
       }
@@ -157,7 +157,7 @@ export const UserProvider = (props) => {
   // To update following
   async function addFollowingAndFollowers(followingId) {
     const response = await fetch(
-      "http://192.168.29.16:3001/insta/user/follow",
+      "https://instagram-clone-8uu2.vercel.app/insta/user/follow",
       {
         method: "PUT",
         headers: {
@@ -178,7 +178,7 @@ export const UserProvider = (props) => {
   // To unfollow
   async function deleteFollowingAndFollowers(followingId) {
     const response = await fetch(
-      "http://192.168.29.16:3001/insta/user/unfollow",
+      "https://instagram-clone-8uu2.vercel.app/insta/user/unfollow",
       {
         method: "PUT",
         headers: {
@@ -199,7 +199,7 @@ export const UserProvider = (props) => {
 
   async function olderChats(recieverId) {
     const response = await fetch(
-      `http://192.168.29.16:3001/insta/user/userschats/${recieverId}`,
+      `https://instagram-clone-8uu2.vercel.app/insta/user/userschats/${recieverId}`,
       {
         method: "GET",
         headers: {
@@ -216,7 +216,7 @@ export const UserProvider = (props) => {
 
   async function likeContent(contentId) {
     const response = await fetch(
-      "http://192.168.29.16:3001/insta/content/likeContent",
+      "https://instagram-clone-8uu2.vercel.app/insta/content/likeContent",
       {
         method: "PUT",
         headers: {
@@ -238,7 +238,7 @@ export const UserProvider = (props) => {
 
   async function UnlikeContent(contentId) {
     const response = await fetch(
-      "http://192.168.29.16:3001/insta/content/unlikeContent",
+      "https://instagram-clone-8uu2.vercel.app/insta/content/unlikeContent",
       {
         method: "PUT",
         headers: {
@@ -306,7 +306,7 @@ export const UserProvider = (props) => {
   }, [chats]);
 
   useEffect(() => {
-    const socketInstance = io("http://192.168.29.16:3001", {
+    const socketInstance = io("https://instagram-clone-8uu2.vercel.app", {
       auth: {
         token: localStorage.getItem("authToken"),
       },
