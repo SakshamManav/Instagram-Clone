@@ -149,7 +149,7 @@ export const UserProvider = (props) => {
     );
     let result = await response.json();
     await setUserProfileData(result);
-    followinginfo();
+    // followinginfo();
   }
 
   // Followers and following

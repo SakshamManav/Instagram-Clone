@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { UserContext } from "../Context/Usercontext";
 import "./FollowersAndFollowingPopup.css"
@@ -13,22 +13,20 @@ export default function FollowersAndFollowingPopup({ data, modalId }) {
     follwingUserInfo,
     followerUserInfo,
     followinginfo,
-    hasFetched,
-    userProfileData,
     deleteFollowingAndFollowers,
   } = context;
 
+  const [loading, setloading] = useState(false);
+  
   const { currentuser } = useParams();
 
-  useEffect(() => {
-    hasFetched.current.following = false;
-    hasFetched.current.followers = false;
-    followinginfo();
-  }, [currentuser]);
+ 
 
   useEffect(() => {
+    setloading(true)
     getContentByName(currentuser);
-    // followinginfo();
+    followinginfo();
+    setloading(false)
   }, [currentuser]);
 
   function handlefollowerAndFollowingSectionClick(){
