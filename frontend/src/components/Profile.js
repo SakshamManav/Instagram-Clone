@@ -65,7 +65,7 @@ export default function Profile() {
         setloading(false);
       });
     }
-
+    followinginfo();
     setUrlUser(currentuser);
   }, [currentuser, user]);
 
