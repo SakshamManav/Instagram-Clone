@@ -1,5 +1,5 @@
 const mongoose =require("mongoose");
-const mongoUri = "mongodb+srv://sakshammanav:uvjRp5XjcK2yvIoC@cluster0.h0pto.mongodb.net/Instagram?retryWrites=true&w=majority&appName=Cluster0";
+const mongoUri = `mongodb+srv://${process.env.DBUSER}:${process.env.DBUSERPASSWORD}@cluster0.h0pto.mongodb.net/Instagram?retryWrites=true&w=majority&appName=Cluster0`;
 
 async function connectMongo(){
     await mongoose.connect(mongoUri);
